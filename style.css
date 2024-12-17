@@ -27,6 +27,7 @@ nav {
 
 nav > .logo{
     margin-left: 2vw;
+    font-size: 1.2vw;
 }
 
 nav > ul {
@@ -48,6 +49,7 @@ nav > ul > li a {
     text-decoration: none;
     color: black;
     font-weight: 700;
+    font-size: 1.1vw;
 }
 
 nav > ul > li a:hover {
@@ -156,13 +158,15 @@ main > div {
 
 .content1 > .wrapimage > img{
     z-index: 10;
+    width: 40vw;
+    height: 70vh;
 } 
 
 .content1 > .wrapimage {
     display: flex;
     justify-content: space-between;
     width: 100vw;
-    height: 32vw;
+    height:70vh;
     position: relative;
     z-index: 10;
     position: absolute;
@@ -216,6 +220,7 @@ main > div {
 
 .content1 > .wrapimage > .webdevoloper > input ~ .text > h2 {
     text-indent: 1.5vw;
+    font-size: 1.8vw;
 }
 
 .content1 > .wrapimage > .webdevoloper > input ~ .text > p {
@@ -223,11 +228,33 @@ main > div {
     text-align: justify;
     margin-top: 2vh;
     line-height: 1.5;
+    font-size: 1vw;
 
 }
 
+.content1 > .wrapimage > .webdevoloper > input ~ .text > a {
+    padding: 2vh 2vw;
+    background-color: white;
+    position: absolute;
+    bottom: 10%;
+    left: 20%;
+    font-size: 1vw;
+    font-weight: 700;
+    text-decoration: none;
+    color: black;
+    border-radius: 20px;
+    box-shadow: 0 0 1vw gray;
+    transition: all 0.6s ease-in-out ;
+
+}
+.content1 > .wrapimage > .webdevoloper > input ~ .text > a::after {
+    
+}
+
+
+
 .content1 > .wrapimage > .webdevoloper > input:checked + label {
-    transform: translateX(-29vw);
+    transform: translateX(-960%);
 }
 
 .content1 > .wrapimage > .webdevoloper > input:checked + label > i::before {
@@ -271,29 +298,24 @@ main > div {
 }
 
 .content1 > .wrapimage > .UiUx > input:checked + label {
-    transform: translateX(30vw);
+    transform: translateX(960%);
     z-index: 100;
+}
+
+.content1 > .wrapimage > .UiUx > input ~ .text > h2 {
+    text-indent: 1.5vw;
+    font-size: 1.8vw;
 }
 
 .content1 > .wrapimage > .UiUx > input ~ .text > p {
     text-indent: 2vw;
     text-align: justify;
     margin-top: 2vh;
-
-
-
-
-
-
-
-
-
-
-
-    
     line-height: 1.5;
+    font-size: 1vw;
 
 }
+
 .content1 > .wrapimage > .UiUx > input:checked + label > i::before {
     content: "\f053";
     font-family: "Font Awesome 5 Free"; 
