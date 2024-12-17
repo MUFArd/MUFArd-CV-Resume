@@ -1,0 +1,305 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body::-webkit-scrollbar{
+    display: none;
+}
+
+nav {
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    background-color: white;
+}
+
+nav > .logo{
+    margin-left: 2vw;
+}
+
+nav > ul {
+    display: flex;
+}
+
+nav > ul > li {
+    margin-right: 4vw;
+    list-style: none;
+    width: auto;
+    height: 5vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+nav > ul > li a {
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+}
+
+nav > ul > li a:hover {
+    text-shadow: 0 0 0.5vw white;
+    transition: all 0.3s ease-in-out;
+}
+
+nav > ul > li a::after {
+    content: '';
+    width: 100%;
+    height: 0.7vh;
+    background-color: white;
+    box-shadow: 0 0 0.5vw 0.1vw white;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translateX(-150%);
+    transition: all 0.3s ease-in-out;
+
+}
+nav > ul > li a:hover::after {
+    transform: translateX(0);
+}
+
+main {
+    width: 100vw;
+}
+
+main > div {
+    width: 100%;
+    height: 100vh;
+}
+
+.content1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content1 > h1:nth-child(1) {
+    margin-top: 10vh;
+    font-size: 4vw;
+}
+
+.content1 > h1:nth-child(2) {
+    margin-top: 5vh;
+}
+
+.content1 > input {
+    display: none;
+}
+
+.content1 > label {
+    width: 100%;
+    height: 30%;
+    z-index: 9;
+}
+
+.content1 > label > h2 {
+    font-size: 9vw;
+    letter-spacing: 0.2vw;
+    font-family: 'Audiowide', sans-serif;
+    position: absolute;
+    top: 20%;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    transition: all 0.5s ease-in-out;
+    z-index: -1;
+    cursor: pointer;
+    
+}
+
+
+.content1 > h2{
+    color: white;
+    font-size: 9vw;
+    letter-spacing: 0.2vw;
+    -webkit-text-stroke: 0.2vw black ;
+    font-family: 'Audiowide', sans-serif;
+    position: absolute;
+    top: 20%;
+    transform: translateY(8vh);
+    z-index: -1;
+    opacity: 0.2;
+    transition: all 0.5s ease-in-out;
+
+}
+.content1 > input:checked + label > h2 {
+    transform: translateY(30%);
+    opacity: 0.2;
+    z-index: -1;
+    -webkit-text-stroke: 0.2vw black ;
+    color: white;
+
+}
+
+.content1 > input:checked ~ h2 {
+    transform: translateY(-2%);
+    color: black;
+    -webkit-text-stroke: none ;
+    opacity: 1;
+    z-index: 1;
+}
+
+.content1 > .wrapimage > img{
+    z-index: 10;
+} 
+
+.content1 > .wrapimage {
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+    height: 32vw;
+    position: relative;
+    z-index: 10;
+    position: absolute;
+    bottom: 0;
+}
+
+
+.content1 > .wrapimage > .webdevoloper,
+.content1 > .wrapimage > .UiUx
+ {
+    width:45vw ;
+    position: relative;
+    overflow: hidden;
+}
+
+.content1 > .wrapimage > .webdevoloper > input,
+.content1 > .wrapimage > .UiUx > input {
+    display: none;
+}
+.content1 > .wrapimage > .webdevoloper > input + label {
+    position: absolute;
+    top: 27%;
+    right: 3%;
+    cursor: pointer;
+    transform: translate(0);
+    width: 3vw;
+    height: 3vw;
+    border-radius: 50%;
+    box-shadow: 0 0 1vw gray;
+    background-color: white;
+    z-index: 2;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   transition: all 0.5s ease-in-out;
+    
+
+}
+.content1 > .wrapimage > .webdevoloper > input ~ .text {
+    padding: 1vw;
+    width: 80%;
+    height: 60%;
+    background-color: white;
+    box-shadow: 0 0 1vw gray;
+    position: absolute;
+    top: 30%;
+    right: 0;
+   transition: all 0.5s ease-in-out;
+   transform: translateX(120%);
+}
+
+.content1 > .wrapimage > .webdevoloper > input ~ .text > h2 {
+    text-indent: 1.5vw;
+}
+
+.content1 > .wrapimage > .webdevoloper > input ~ .text > p {
+    text-indent: 2vw;
+    text-align: justify;
+    margin-top: 2vh;
+    line-height: 1.5;
+
+}
+
+.content1 > .wrapimage > .webdevoloper > input:checked + label {
+    transform: translateX(-29vw);
+}
+
+.content1 > .wrapimage > .webdevoloper > input:checked + label > i::before {
+    content: "\f054";
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 900; 
+}
+
+.content1 > .wrapimage > .webdevoloper > input:checked ~ .text {
+    transform: translate(-10%);
+} 
+
+.content1 > .wrapimage > .UiUx > input + label {
+    position: absolute;
+    top: 27%;
+    left: 2%;
+    cursor: pointer;
+    transform: translate(0);
+    width: 3vw;
+    height: 3vw;
+    border-radius: 50%;
+    box-shadow: 0 0 1vw gray;
+    background-color: white;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   transition: all 0.5s ease-in-out;
+    
+
+}
+.content1 > .wrapimage > .UiUx > input ~ .text {
+    padding: 1vw;
+    width: 80%;
+    height: 60%;
+    box-shadow: 0 0 1vw gray;
+    position: absolute;
+    top: 30%;
+    left: 0;
+   transition: all 0.5s ease-in-out;
+   transform: translateX(-120%);
+}
+
+.content1 > .wrapimage > .UiUx > input:checked + label {
+    transform: translateX(30vw);
+    z-index: 100;
+}
+
+.content1 > .wrapimage > .UiUx > input ~ .text > p {
+    text-indent: 2vw;
+    text-align: justify;
+    margin-top: 2vh;
+
+
+
+
+
+
+
+
+
+
+
+    
+    line-height: 1.5;
+
+}
+.content1 > .wrapimage > .UiUx > input:checked + label > i::before {
+    content: "\f053";
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 900; 
+}
+
+.content1 > .wrapimage > .UiUx > input:checked ~ .text {
+    transform: translate(10%);
+} 
