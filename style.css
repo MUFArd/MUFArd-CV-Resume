@@ -9,6 +9,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
+    overflow: hidden;
 }
 
 body::-webkit-scrollbar{
@@ -23,6 +24,7 @@ nav {
     align-items: center;
     position: fixed;
     background-color: white;
+    z-index: 100000;
 }
 
 nav > .logo{
@@ -82,33 +84,49 @@ main > div {
     width: 100%;
     height: 100vh;
 }
+main {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
 
-.content1 {
+#content1 {
+    order: 1; 
+}
+
+#aboutme {
+    order: 2;
+}
+
+#content1 {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.content1 > h1:nth-child(1) {
+#content1 > h1:nth-child(1) {
     margin-top: 10vh;
     font-size: 4vw;
 }
 
-.content1 > h1:nth-child(2) {
+#content1 > h1:nth-child(2) {
     margin-top: 5vh;
 }
 
-.content1 > input {
+#content1 > input {
     display: none;
 }
 
-.content1 > label {
+#content1 > label {
     width: 100%;
     height: 30%;
     z-index: 9;
 }
 
-.content1 > label > h2 {
+#content1 > label > h2 {
     font-size: 9vw;
     letter-spacing: 0.2vw;
     font-family: 'Audiowide', sans-serif;
@@ -125,7 +143,7 @@ main > div {
 }
 
 
-.content1 > h2{
+#content1 > h2{
     color: white;
     font-size: 9vw;
     letter-spacing: 0.2vw;
@@ -139,7 +157,7 @@ main > div {
     transition: all 0.5s ease-in-out;
 
 }
-.content1 > input:checked + label > h2 {
+#content1 > input:checked + label > h2 {
     transform: translateY(30%);
     opacity: 0.2;
     z-index: -1;
@@ -148,7 +166,7 @@ main > div {
 
 }
 
-.content1 > input:checked ~ h2 {
+#content1 > input:checked ~ h2 {
     transform: translateY(-2%);
     color: black;
     -webkit-text-stroke: none ;
@@ -156,13 +174,14 @@ main > div {
     z-index: 1;
 }
 
-.content1 > .wrapimage > img{
+#content1 > .wrapimage > img{
     z-index: 10;
     width: 40vw;
     height: 70vh;
+    transition: all 0.5s ease-in-out;
 } 
 
-.content1 > .wrapimage {
+#content1 > .wrapimage {
     display: flex;
     justify-content: space-between;
     width: 100vw;
@@ -174,19 +193,19 @@ main > div {
 }
 
 
-.content1 > .wrapimage > .webdevoloper,
-.content1 > .wrapimage > .UiUx
+#content1 > .wrapimage > .webdevoloper,
+#content1 > .wrapimage > .UiUx
  {
     width:45vw ;
     position: relative;
     overflow: hidden;
 }
 
-.content1 > .wrapimage > .webdevoloper > input,
-.content1 > .wrapimage > .UiUx > input {
+#content1 > .wrapimage > .webdevoloper > input,
+#content1 > .wrapimage > .UiUx > input {
     display: none;
 }
-.content1 > .wrapimage > .webdevoloper > input + label {
+#content1 > .wrapimage > .webdevoloper > input + label {
     position: absolute;
     top: 27%;
     right: 3%;
@@ -205,7 +224,7 @@ main > div {
     
 
 }
-.content1 > .wrapimage > .webdevoloper > input ~ .text {
+#content1 > .wrapimage > .webdevoloper > input ~ .text {
     padding: 1vw;
     width: 80%;
     height: 60%;
@@ -218,12 +237,12 @@ main > div {
    transform: translateX(120%);
 }
 
-.content1 > .wrapimage > .webdevoloper > input ~ .text > h2 {
+#content1 > .wrapimage > .webdevoloper > input ~ .text > h2 {
     text-indent: 1.5vw;
     font-size: 1.8vw;
 }
 
-.content1 > .wrapimage > .webdevoloper > input ~ .text > p {
+#content1 > .wrapimage > .webdevoloper > input ~ .text > p {
     text-indent: 2vw;
     text-align: justify;
     margin-top: 2vh;
@@ -232,7 +251,7 @@ main > div {
 
 }
 
-.content1 > .wrapimage > .webdevoloper > input ~ .text > a {
+#content1 > .wrapimage > .webdevoloper > input ~ .text > a {
     padding: 2vh 2vw;
     background-color: white;
     position: absolute;
@@ -247,27 +266,22 @@ main > div {
     transition: all 0.6s ease-in-out ;
 
 }
-.content1 > .wrapimage > .webdevoloper > input ~ .text > a::after {
-    
-}
 
-
-
-.content1 > .wrapimage > .webdevoloper > input:checked + label {
+#content1 > .wrapimage > .webdevoloper > input:checked + label {
     transform: translateX(-960%);
 }
 
-.content1 > .wrapimage > .webdevoloper > input:checked + label > i::before {
+#content1 > .wrapimage > .webdevoloper > input:checked + label > i::before {
     content: "\f054";
     font-family: "Font Awesome 5 Free"; 
     font-weight: 900; 
 }
 
-.content1 > .wrapimage > .webdevoloper > input:checked ~ .text {
+#content1 > .wrapimage > .webdevoloper > input:checked ~ .text {
     transform: translate(-10%);
 } 
 
-.content1 > .wrapimage > .UiUx > input + label {
+#content1 > .wrapimage > .UiUx > input + label {
     position: absolute;
     top: 27%;
     left: 2%;
@@ -285,7 +299,7 @@ main > div {
     
 
 }
-.content1 > .wrapimage > .UiUx > input ~ .text {
+#content1 > .wrapimage > .UiUx > input ~ .text {
     padding: 1vw;
     width: 80%;
     height: 60%;
@@ -297,17 +311,17 @@ main > div {
    transform: translateX(-120%);
 }
 
-.content1 > .wrapimage > .UiUx > input:checked + label {
+#content1 > .wrapimage > .UiUx > input:checked + label {
     transform: translateX(960%);
     z-index: 100;
 }
 
-.content1 > .wrapimage > .UiUx > input ~ .text > h2 {
+#content1 > .wrapimage > .UiUx > input ~ .text > h2 {
     text-indent: 1.5vw;
     font-size: 1.8vw;
 }
 
-.content1 > .wrapimage > .UiUx > input ~ .text > p {
+#content1 > .wrapimage > .UiUx > input ~ .text > p {
     text-indent: 2vw;
     text-align: justify;
     margin-top: 2vh;
@@ -316,12 +330,95 @@ main > div {
 
 }
 
-.content1 > .wrapimage > .UiUx > input:checked + label > i::before {
+#content1 > .wrapimage > .UiUx > input:checked + label > i::before {
     content: "\f053";
     font-family: "Font Awesome 5 Free"; 
     font-weight: 900; 
 }
 
-.content1 > .wrapimage > .UiUx > input:checked ~ .text {
+#content1 > .wrapimage > .UiUx > input:checked ~ .text {
     transform: translate(10%);
 } 
+ 
+#aboutme{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+
+
+#aboutme:target ~ #content1 > .wrapimage > img {
+    transform: translateY(69vh)
+               translateX(-39vw) 
+               scale(0.3);
+    transition: all 0.5s ease-in-out;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 0 0 1vw gray,
+                0 0 1.5vw gray;
+}
+
+#aboutme > .biodata {
+    width: 18vw;
+    height: 38vh;
+    position: absolute;
+    top: 15vh;
+    left: 2vw;
+    box-shadow: 0 0 1vw gray;
+    border-radius: 30px;
+    padding-top: 1vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    z-index: -1;
+    overflow: hidden;
+    transform: translateX(-50vw);
+    transition: all 0.5s ease-in-out;
+}
+
+#aboutme:target > .biodata {
+    transform: translateX(0);
+}
+
+
+#aboutme:target > .biodata > h2 {
+    font-size: 1.5;
+    width: 100%;
+    text-align: center;
+    z-index: 1;
+}
+
+
+#aboutme > .biodata > .medsos {
+    position: absolute;
+    bottom: 2vh;
+    left: 9%;
+    width: 80%;
+    height: 13%;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0 0 1vw gray;
+    padding-top:1vh ;   
+
+} 
+
+#aboutme:target > .biodata > .medsos > i:nth-child(1) {
+    margin-right: 1vw;
+}
+#aboutme:target > .biodata > .medsos > i:nth-child(2) { 
+    background: linear-gradient(45deg, rgb(255, 175, 0) 0%, rgb(245, 96, 64) 25%, rgb(150, 37, 108) 50%, rgb(227, 73, 154) 75%, rgb(52, 176, 232) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color:transparent;
+    height: 4vh;
+}
+#aboutme:target > .biodata > .medsos > i:nth-child(3) { 
+    color: rgb(9, 230, 24);
+    margin-left: 1vw;
+}
+
+
+

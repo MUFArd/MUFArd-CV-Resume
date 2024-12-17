@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Target Selector</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: Arial, sans-serif;
+        }
+        #content1 {
+            height: 100vh;
+            background-color: lightblue;
+        }
+        #aboutme {
+            height: 100vh;
+            background-color: lightgreen;
+        }
+        #aboutme:target ~ #content1 {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#content1">Home</a></li>
+            <li><a href="#aboutme">About Me</a></li>
+        </ul>
+    </nav>
+    <div id="content1">This is Home Section</div>
+    <div id="aboutme">This is About Me Section</div>
+</body>
+</html>
