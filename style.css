@@ -361,7 +361,7 @@ main {
 
 #aboutme > .biodata {
     width: 18vw;
-    height: 38vh;
+    height: 42vh;
     position: absolute;
     top: 15vh;
     left: 2vw;
@@ -371,9 +371,7 @@ main {
     display: flex;
     align-items: center;
     flex-direction: column;
-    background-color: white;
-    z-index: -1;
-    overflow: hidden;
+    background-color: white;    
     transform: translateX(-50vw);
     transition: all 0.5s ease-in-out;
 }
@@ -387,16 +385,16 @@ main {
     font-size: 1.5;
     width: 100%;
     text-align: center;
-    z-index: 1;
+    z-index: -1;
 }
 
 
 #aboutme > .biodata > .medsos {
     position: absolute;
-    bottom: 2vh;
+    bottom: 5.5vh;
     left: 9%;
     width: 80%;
-    height: 13%;
+    height: 12%;
     border-radius: 20px;
     display: flex;
     justify-content: center;
@@ -406,19 +404,125 @@ main {
 
 } 
 
-#aboutme:target > .biodata > .medsos > i:nth-child(1) {
+#aboutme:target > .biodata > .medsos > a:nth-child(1) {
     margin-right: 1vw;
+    color: black;
 }
-#aboutme:target > .biodata > .medsos > i:nth-child(2) { 
+#aboutme:target > .biodata > .medsos > a:nth-child(2) { 
     background: linear-gradient(45deg, rgb(255, 175, 0) 0%, rgb(245, 96, 64) 25%, rgb(150, 37, 108) 50%, rgb(227, 73, 154) 75%, rgb(52, 176, 232) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color:transparent;
     height: 4vh;
 }
-#aboutme:target > .biodata > .medsos > i:nth-child(3) { 
+#aboutme:target > .biodata > .medsos > a:nth-child(3) { 
     color: rgb(9, 230, 24);
     margin-left: 1vw;
 }
 
+#aboutme > .biodata > a {
+    text-decoration: none;
+    padding: 1.4vh 1.5vw;
+    box-shadow: 0 0 1vw gray;
+    border-radius: 30px;
+    position: absolute;
+    bottom: -2vh;
+    transform: translateX(-50vw);
+    transition: all 0.5s ease-in-out;
+    transition-delay:0.3s;
+    font-weight: 700;
+    color: black;
+    cursor: pointer;
+    background-color: white;
+}
+
+#aboutme:target > .biodata > a {
+    transform: translateX(0);
+}
+
+#aboutme > .skill {
+    width: 70vw;
+    height: 62vh;
+    background-color: white;
+    box-shadow: 0 0 1vw gray;
+    position: absolute;
+    right: 4.5vw;
+    top: 13vh;
+    border-radius: 30px;
+    padding: 1vh 1vw;
+    transform: translateX(80vw);
+    transition: all 0.5s ease-in-out;
+}
+
+#aboutme:target > .skill {
+    transform: translateX(0);
+}
+
+#aboutme > .skill > .skillbar {
+    width: 30vw;
+    height: 10vh;
+    margin-top: 2vh;
+}
+#aboutme > .skill > .skillbar > .percent {
+    height: 4vh;
+    margin-top: 1vh;
+    width: 29vw;
+    border-radius: 30px;
+    box-shadow: 0 0 1vw gray;
+}
+
+#aboutme> .skill > .skillbar > .percent > .bar{
+    width:0;
+    height: 100%;
+    border-radius: 30px;
+    transition: all 0.7s ease-in-out; 
+    transition-delay: 0.5s;
+}
+
+#aboutme:target > .skill > .skillbar > .percent > .bar{
+    width:92%;
+    display: flex;
+    align-items: center;
+    border-radius: 30px; 
+    background: linear-gradient(90deg, rgb(255, 149, 0),rgb(255, 132, 0),rgb(255, 132, 0))
+}
+
+#aboutme> .skill > .skillbar > .percent > .bar > h3 {
+    width: 100%;
+    font-size: 1vw;
+    text-align: right;
+    margin-right: 1vw;
+    color: white;
+}
+
+#aboutme:target > .skill > .skillbar:nth-child(2) > .percent > .bar{
+    width:85%;
+    display: flex;
+    align-items: center;
+    border-radius: 30px; 
+    background: linear-gradient(90deg, rgb(0, 115, 255),rgb(0, 85, 255),rgb(0, 34, 255))
+}
+
+#aboutme:target > .skill > .skillbar:nth-child(3) > .percent > .bar{
+    width:15%;
+    display: flex;
+    align-items: center;
+    border-radius: 30px; 
+    background: linear-gradient(90deg, rgb(251, 255, 0),rgb(255, 234, 0),rgb(251, 255, 0))
+}
+
+#aboutme:target > .skill > .skillbar:nth-child(4) > .percent > .bar{
+    width:76%;
+    display: flex;
+    align-items: center;
+    border-radius: 30px; 
+    background: linear-gradient(90deg, rgb(255, 149, 0),rgb(255, 132, 0),rgb(255, 132, 0))
+}
+#aboutme:target > .skill > .skillbar:nth-child(5) > .percent > .bar{
+    width:84%;
+    display: flex;
+    align-items: center;
+    border-radius: 30px; 
+    background: linear-gradient(rgb(25, 148, 255),rgb(33, 74, 255),rgb(0, 47, 255));
+}
 
 
