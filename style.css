@@ -32,6 +32,14 @@ nav > .logo{
     font-size: 1.2vw;
 }
 
+nav > input {
+    display: none;
+}
+
+nav > label {
+    display: none;
+}
+
 nav > ul {
     display: flex;
 }
@@ -107,14 +115,11 @@ main {
     align-items: center;
 }
 
-#content1 > h1:nth-child(1) {
+#content1 > h1 {
     margin-top: 10vh;
     font-size: 4vw;
 }
 
-#content1 > h1:nth-child(2) {
-    margin-top: 5vh;
-}
 
 #content1 > input {
     display: none;
@@ -128,7 +133,7 @@ main {
 
 #content1 > label > h2 {
     font-size: 9vw;
-    letter-spacing: 0.2vw;
+    letter-spacing: 0.2vh;
     font-family: 'Audiowide', sans-serif;
     position: absolute;
     top: 20%;
@@ -146,19 +151,19 @@ main {
 #content1 > h2{
     color: white;
     font-size: 9vw;
-    letter-spacing: 0.2vw;
+    letter-spacing: 0.2vh;
     -webkit-text-stroke: 0.2vw black ;
     font-family: 'Audiowide', sans-serif;
     position: absolute;
     top: 20%;
-    transform: translateY(8vh);
+    transform: translateY(2vh);
     z-index: -1;
     opacity: 0.2;
     transition: all 0.5s ease-in-out;
 
 }
 #content1 > input:checked + label > h2 {
-    transform: translateY(30%);
+    transform: translateY(2vh);
     opacity: 0.2;
     z-index: -1;
     -webkit-text-stroke: 0.2vw black ;
@@ -167,7 +172,7 @@ main {
 }
 
 #content1 > input:checked ~ h2 {
-    transform: translateY(-2%);
+    transform: translateY(0);
     color: black;
     -webkit-text-stroke: none ;
     opacity: 1;
@@ -525,4 +530,259 @@ main {
     background: linear-gradient(rgb(25, 148, 255),rgb(33, 74, 255),rgb(0, 47, 255));
 }
 
+@media only screen and (max-width : 780px) {
 
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow: visible;
+}
+
+nav {
+    height: 5vh;
+    position: fixed;
+}
+
+nav > .logo {
+    font-size: 1vh;
+}
+
+nav > label {
+    display: block;
+    font-size: 3vh;
+    margin-right: 2vw;
+}
+
+nav > ul {
+    width: 40vw;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 5vh;
+    right: 1vw;
+    background-color: white;
+    border-radius:30px ;
+    box-shadow: 0 0 1vh gray;
+    transform: translateX(50vw);
+    visibility: hidden;
+    opacity: 1;
+    transition: all 0.5s ease-in-out;
+}
+
+
+nav > input:checked ~ ul {
+    transform: translateX(0);
+    visibility: visible;
+    opacity: 1;
+}
+
+nav > input:checked ~ label > i::before {
+    content: "\f00d";
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 900; 
+    background-color: white;
+}
+
+nav > ul > li {
+    padding-left: 2vw;    
+}
+
+nav > ul > li a {
+    font-size: 1vh;
+}
+
+
+
+#content1 > h1 {
+
+margin-top: 7vh;
+
+}
+
+
+#content1 > input {}
+
+#content1 > label {}
+
+#content1 > label > h2 {
+    top: 10%;
+}
+
+#content1 > h2 {
+    top: 10%;
+}
+
+#content1 > input:checked + label > h2 {}
+
+#content1 > input:checked ~ h2 {
+
+}
+
+#content1 > .wrapimage > img {
+    width: 30vh;
+    height: 30vh;
+    border-radius: 50%;
+    background-color: transparent;
+    order: 1;
+}
+
+#content1 > .wrapimage {
+    top: 14vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+
+}
+
+#content1 > .wrapimage > .webdevoloper {
+    order: 2;
+    position: absolute;
+    top: 35%;
+    left:0 ;
+}
+
+#content1 > .wrapimage > .UiUx {
+    order: 3;
+    position: absolute;
+    top: 70%;
+    right: 0;
+}
+
+#content1 > .wrapimage > .webdevoloper,
+#content1 > .wrapimage > .UiUx { 
+    width: 100vw;
+    height:30vh;
+    overflow: hidden;
+}
+
+#content1 > .wrapimage > .webdevoloper > input + label {
+    position: absolute;
+    width: 4vh;
+    height: 4vh;
+    z-index: 1;
+    background-color: white;
+}
+
+#content1 > .wrapimage > .webdevoloper > input + label > i{
+    font-size: 3vh;
+
+}
+
+#content1 > .wrapimage > .webdevoloper > input ~ .text {
+    width: 80vw;
+    visibility: hidden;
+    opacity: 0;
+}
+
+#content1 > .wrapimage > .webdevoloper > input ~ .text > h2 {
+    margin-top: 1vh;
+    font-size: 1.7vh;
+}
+
+#content1 > .wrapimage > .webdevoloper > input ~ .text > p {
+    font-size: 1.2vh;
+}
+
+#content1 > .wrapimage > .webdevoloper > input ~ .text > a {
+    padding: 1vh 2vw;
+    font-size: 1vh;
+    position: absolute;
+    left: 50%;
+    bottom: 5%;
+}
+
+#content1 > .wrapimage > .webdevoloper > input:checked + label {
+    transform: translate(-85vw);
+}
+
+#content1 > .wrapimage > .webdevoloper > input:checked ~ .text {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+#content1 > .wrapimage > .UiUx > input + label {
+    position: absolute;
+    width: 4vh;
+    height: 4vh;
+    z-index: 1;
+    background-color: white;
+}
+
+#content1 > .wrapimage > .UiUx > input + label > i{
+    font-size: 3vh;
+
+}
+
+#content1 > .wrapimage > .UiUx > input ~ .text { 
+    width: 80vw;
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    
+}
+
+
+#content1 > .wrapimage > .UiUx > input:checked + label {
+    transform: translate(82vw);
+}
+
+#content1 > .wrapimage > .UiUx > input ~ .text > h2 {
+    margin-top: 1vh;
+    font-size: 1.7vh;
+}
+
+#content1 > .wrapimage > .UiUx > input ~ .text > p {
+    font-size: 1.2vh;
+}
+
+#content1 > .wrapimage > .UiUx > input:checked ~ .text {
+    visibility: visible;
+    opacity: 1;
+}
+
+#aboutme {}
+
+#aboutme:target ~ #content1 > .wrapimage > img {}
+
+#aboutme > .biodata {}
+
+#aboutme:target > .biodata {}
+
+#aboutme:target > .biodata > h2 {}
+
+#aboutme > .biodata > .medsos {}
+
+#aboutme:target > .biodata > .medsos > a:nth-child(1) {}
+
+#aboutme:target > .biodata > .medsos > a:nth-child(2) {}
+
+#aboutme:target > .biodata > .medsos > a:nth-child(3) {}
+
+#aboutme > .biodata > a {}
+
+#aboutme:target > .biodata > a {}
+
+#aboutme > .skill {}
+
+#aboutme:target > .skill {}
+
+#aboutme > .skill > .skillbar {}
+
+#aboutme > .skill > .skillbar > .percent {}
+
+#aboutme> .skill > .skillbar > .percent > .bar {}
+
+#aboutme:target > .skill > .skillbar > .percent > .bar {}
+
+#aboutme:target > .skill > .skillbar:nth-child(2) > .percent > .bar {}
+
+#aboutme:target > .skill > .skillbar:nth-child(3) > .percent > .bar {}
+
+#aboutme:target > .skill > .skillbar:nth-child(4) > .percent > .bar {}
+
+#aboutme:target > .skill > .skillbar:nth-child(5) > .percent > .bar {}
+
+@media only screen and (max-width : 780px) {}
+
+}
