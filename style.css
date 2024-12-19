@@ -351,6 +351,22 @@ main {
 #content1 > .wrapimage > .UiUx > input:checked ~ .text {
     transform: translate(10%);
 } 
+
+#content1 > .wrapimage > .UiUx > input ~ .text > a {
+    padding: 2vh 2vw;
+    background-color: white;
+    position: absolute;
+    bottom: 10%;
+    left: 20%;
+    font-size: 1vw;
+    font-weight: 700;
+    text-decoration: none;
+    color: black;
+    border-radius: 20px;
+    box-shadow: 0 0 1vw gray;
+    transition: all 0.6s ease-in-out ;
+
+}
  
 #aboutme{
     width: 100vw;
@@ -454,38 +470,74 @@ main {
     transform: translateX(0);
 }
 
-#aboutme > .skill {
-    width: 70vw;
-    height: 62vh;
+#aboutme > .skill-FRONT {
+    width: 20vw;
+    height: 30vh;
     background-color: white;
     box-shadow: 0 0 1vw gray;
     position: absolute;
-    right: 4.5vw;
+    left: 25vw;
     top: 13vh;
     border-radius: 30px;
-    padding: 1vh 1vw;
+    padding: 1vh 4vw 1vh 4vw;
     transform: translateX(80vw);
     transition: all 0.5s ease-in-out;
 }
 
-#aboutme:target > .skill {
-    transform: translateX(0);
+#aboutme > .skill-FRONT::before{
+    content: 'FRONT DEV';
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 4.2vh 0.5vw;
+    background-color: white;
+    border-radius: 30px 0 0 30px;
+    box-shadow: 0 0 1vw gray;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    font-family: "Audiowide", sans-serif;
+    font-size: 1vw;
+    font-weight: 700;
 }
 
-#aboutme > .skill > .skillbar {
-    width: 30vw;
-    height: 10vh;
+#aboutme > .skill-FRONT::after{
+    content: 'FRONT DEV';
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 4.2vh 0.5vw;
+    background-color: white;
+    border-radius: 0 30px 30px 0;
+    box-shadow: 0 0 1vw gray;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    font-family: "Audiowide", sans-serif;
+    font-size: 1vw;
+    font-weight: 700;
+}
+
+#aboutme:target > .skill-FRONT {
+    transform: translateX(0);
+}
+#aboutme > .skill-FRONT > .skillbar {
+    width: 20vw;
+    height: 7vh;
     margin-top: 2vh;
 }
-#aboutme > .skill > .skillbar > .percent {
-    height: 4vh;
+
+#aboutme > .skill-FRONT > .skillbar > h3{
+    font-size: 1vw;
+}
+
+#aboutme > .skill-FRONT > .skillbar > .percent {
+    width: 20vw;
+    height: 3vh;
     margin-top: 1vh;
-    width: 29vw;
     border-radius: 30px;
     box-shadow: 0 0 1vw gray;
 }
 
-#aboutme> .skill > .skillbar > .percent > .bar{
+#aboutme> .skill-FRONT > .skillbar > .percent > .bar{
     width:0;
     height: 100%;
     border-radius: 30px;
@@ -493,7 +545,7 @@ main {
     transition-delay: 0.5s;
 }
 
-#aboutme:target > .skill > .skillbar > .percent > .bar{
+#aboutme:target > .skill-FRONT > .skillbar > .percent > .bar{
     width:92%;
     display: flex;
     align-items: center;
@@ -501,7 +553,7 @@ main {
     background: linear-gradient(90deg, rgb(255, 149, 0),rgb(255, 132, 0),rgb(255, 132, 0))
 }
 
-#aboutme> .skill > .skillbar > .percent > .bar > h3 {
+#aboutme> .skill-FRONT > .skillbar > .percent > .bar > h3 {
     width: 100%;
     font-size: 1vw;
     text-align: right;
@@ -509,7 +561,7 @@ main {
     color: white;
 }
 
-#aboutme:target > .skill > .skillbar:nth-child(2) > .percent > .bar{
+#aboutme:target > .skill-FRONT > .skillbar:nth-child(2) > .percent > .bar{
     width:85%;
     display: flex;
     align-items: center;
@@ -517,7 +569,7 @@ main {
     background: linear-gradient(90deg, rgb(0, 115, 255),rgb(0, 85, 255),rgb(0, 34, 255))
 }
 
-#aboutme:target > .skill > .skillbar:nth-child(3) > .percent > .bar{
+#aboutme:target > .skill-FRONT > .skillbar:nth-child(3) > .percent > .bar{
     width:15%;
     display: flex;
     align-items: center;
@@ -525,20 +577,126 @@ main {
     background: linear-gradient(90deg, rgb(251, 255, 0),rgb(255, 234, 0),rgb(251, 255, 0))
 }
 
-#aboutme:target > .skill > .skillbar:nth-child(4) > .percent > .bar{
-    width:76%;
+
+
+#aboutme > .skill-BACK {
+    width: 20vw;
+    height: 30vh;
+    background-color: white;
+    box-shadow: 0 0 1vw gray;
+    position: absolute;
+    right: 15vw;
+    top: 13vh;
+    border-radius: 30px;
+    padding: 1vh 4vw 1vh 4vw;
+    transform: translateX(0) ;
+    transition: all 0.5s ease-in-out;
+}
+
+#aboutme > .skill-BACK::before{
+    content: 'BACK_ DEV';
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 4.2vh 0.5vw;
+    background-color: white;
+    border-radius: 30px 0 0 30px;
+    box-shadow: 0 0 1vw gray;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    font-family: "Audiowide", sans-serif;
+    font-size: 1vw;
+    font-weight: 700;
+}
+
+#aboutme > .skill-BACK::after{
+    content: 'BACK_ DEV';
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 4.2vh 0.5vw;
+    background-color: white;
+    border-radius: 0 30px 30px 0;
+    box-shadow: 0 0 1vw gray;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    font-family: "Audiowide", sans-serif;
+    font-size: 1vw;
+    font-weight: 700;
+}
+
+#aboutme:target > .skill-BACK {
+    transform:rotate3d(180deg);
+}
+
+#aboutme > .skill-BACK > .skillbar {
+    width: 20vw;
+    height: 7vh;
+    margin-top: 2vh;
+}
+
+#aboutme > .skill-BACK > .skillbar > h3{
+    font-size: 1vw;
+}
+
+#aboutme > .skill-BACK > .skillbar > .percent {
+    width: 20vw;
+    height: 3vh;
+    margin-top: 1vh;
+    border-radius: 30px;
+    box-shadow: 0 0 1vw gray;
+}
+
+#aboutme> .skill-BACK > .skillbar > .percent > .bar{
+    width:0;
+    height: 100%;
+    border-radius: 30px;
+    transition: all 0.7s ease-in-out; 
+    transition-delay: 0.5s;
+}
+
+#aboutme:target > .skill-BACK > .skillbar > .percent > .bar{
+    width:35%;
     display: flex;
     align-items: center;
     border-radius: 30px; 
-    background: linear-gradient(90deg, rgb(255, 149, 0),rgb(255, 132, 0),rgb(255, 132, 0))
+    background: linear-gradient(90deg,rgb(207, 1, 207),rgb(192, 0, 192), rgb(175, 0, 175))
 }
-#aboutme:target > .skill > .skillbar:nth-child(5) > .percent > .bar{
-    width:84%;
+
+#aboutme> .skill-BACK > .skillbar > .percent > .bar > h3 {
+    width: 100%;
+    font-size: 1vw;
+    text-align: right;
+    margin-right: 1vw;
+    color: white;
+}
+
+#aboutme> .skill-BACK > .skillbar:nth-child(2) > .percent > .bar > h3 {
+    padding-left: 0.5vw;
+    color: black;
+}
+
+#aboutme> .skill-BACK > .skillbar:nth-child(3) > .percent > .bar > h3 {
+    padding-left: 0.5vw;
+    color: black;
+}
+
+#aboutme:target > .skill-BACK > .skillbar:nth-child(2) > .percent > .bar{
+    width:0;
     display: flex;
     align-items: center;
     border-radius: 30px; 
-    background: linear-gradient(rgb(25, 148, 255),rgb(33, 74, 255),rgb(0, 47, 255));
+    background: linear-gradient(90deg,rgb(242, 255, 0),yellow, rgb(0, 115, 255),rgb(0, 85, 255));
 }
+
+#aboutme:target > .skill-BACK > .skillbar:nth-child(3) > .percent > .bar{
+    width:0;
+    display: flex;
+    align-items: center;
+    border-radius: 30px; 
+    background: linear-gradient(90deg, rgb(251, 255, 0),rgb(255, 234, 0),rgb(251, 255, 0))
+}
+
 
 @media only screen and (max-width : 780px) {
 
@@ -610,19 +768,19 @@ margin-top: 7vh;
 }
 
 
-#content1 > input {}
-
-#content1 > label {}
 
 #content1 > label > h2 {
     top: 10%;
+    font-size: 5vh;
 }
 
 #content1 > h2 {
     top: 10%;
 }
 
-#content1 > input:checked + label > h2 {}
+#content1 > input:checked + label > h2 {
+    transform: scale(0.9) translateY(5vh);
+}
 
 #content1 > input:checked ~ h2 {
 
@@ -695,7 +853,7 @@ margin-top: 7vh;
 
 #content1 > .wrapimage > .webdevoloper > input ~ .text > a {
     padding: 1vh 2vw;
-    font-size: 1vh;
+    font-size: 1.2vh;
     position: absolute;
     left: 50%;
     bottom: 5%;
@@ -751,6 +909,15 @@ margin-top: 7vh;
     opacity: 1;
 }
 
+#content1 > .wrapimage > .UiUx > input ~ .text > a {
+    padding: 1vh 2vw;
+    font-size: 1vh;
+    position: absolute;
+    left: 50%;
+    bottom: 5%;
+    font-size: 1.2vh;
+}
+
 #aboutme {}
 
 #aboutme:target ~ #content1 > .wrapimage > img {}
@@ -773,26 +940,25 @@ margin-top: 7vh;
 
 #aboutme:target > .biodata > a {}
 
-#aboutme > .skill {}
+#aboutme > .skill-FRONT {}
 
-#aboutme:target > .skill {}
+#aboutme:target > .skill-FRONT {}
 
-#aboutme > .skill > .skillbar {}
+#aboutme > .skill-FRONT > .skillbar {}
 
-#aboutme > .skill > .skillbar > .percent {}
+#aboutme > .skill-FRONT > .skillbar > .percent {}
 
-#aboutme> .skill > .skillbar > .percent > .bar {}
+#aboutme> .skill-FRONT > .skillbar > .percent > .bar {}
 
-#aboutme:target > .skill > .skillbar > .percent > .bar {}
+#aboutme:target > .skill-FRONT > .skillbar > .percent > .bar {}
 
-#aboutme:target > .skill > .skillbar:nth-child(2) > .percent > .bar {}
+#aboutme:target > .skill-FRONT > .skillbar:nth-child(2) > .percent > .bar {}
 
-#aboutme:target > .skill > .skillbar:nth-child(3) > .percent > .bar {}
+#aboutme:target > .skill-FRONT > .skillbar:nth-child(3) > .percent > .bar {}
 
-#aboutme:target > .skill > .skillbar:nth-child(4) > .percent > .bar {}
+#aboutme:target > .skill-FRONT > .skillbar:nth-child(4) > .percent > .bar {}
 
-#aboutme:target > .skill > .skillbar:nth-child(5) > .percent > .bar {}
+#aboutme:target > .skill-FRONT > .skillbar:nth-child(5) > .percent > .bar {}
 
 @media only screen and (max-width : 780px) {}
 
-}
